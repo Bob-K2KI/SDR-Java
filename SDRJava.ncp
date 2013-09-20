@@ -1,0 +1,158 @@
+<Project>
+  <Name>SDRJava</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>sdrgraph</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Graph2D</Name>
+        <Access>Public</Access>
+        <Location left="26" top="40" />
+        <Size width="578" height="315" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Font ft10 = new Font("Arial",Font.PLAIN,10)</Member>
+        <Member type="Field">private GraphPanel ZG</Member>
+        <Member type="Field">int Galto</Member>
+        <Member type="Field">int Gancho</Member>
+        <Member type="Field">int x0</Member>
+        <Member type="Field">int y0</Member>
+        <Member type="Field">boolean isFreq</Member>
+        <Member type="Field">JPanel DisplayPanel = new JPanel()</Member>
+        <Member type="Property">public static int escalaX { get; set; }</Member>
+        <Member type="Property">public static int escalaY { get; set; }</Member>
+        <Member type="Constructor">public Graph2D(int Gancho, int Galto, boolean zoomEn, int escalaX, int escalaY, int x0, int y0, boolean isFreq)</Member>
+        <Member type="Property">private boolean zoomPos { get; set; }</Member>
+        <Member type="Property">private boolean zoomEnable { get; set; }</Member>
+        <Member type="Property">private Border borde { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GraphPanel</Name>
+        <Access>Public</Access>
+        <Location left="341" top="402" />
+        <Size width="500" height="689" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">boolean isFreq</Member>
+        <Member type="Field">Font ft7 = new Font("Arial",Font.PLAIN,7)</Member>
+        <Member type="Field">Font ft10 = new Font("Arial",Font.PLAIN,10)</Member>
+        <Member type="Field">int offsetX</Member>
+        <Member type="Field">int offsetY</Member>
+        <Member type="Field">static BasicStroke dashed</Member>
+        <Member type="Field">public double valxi</Member>
+        <Member type="Field">public double valyi</Member>
+        <Member type="Field">public double valxi1</Member>
+        <Member type="Field">public double valyi1</Member>
+        <Member type="Field">int x0</Member>
+        <Member type="Field">int y0</Member>
+        <Member type="Field">public static int escala</Member>
+        <Member type="Field">boolean dragging</Member>
+        <Member type="Field">private int Galto</Member>
+        <Member type="Field">private int Gancho</Member>
+        <Member type="Field">private Border colorLine</Member>
+        <Member type="Field">static BasicStroke grosor1</Member>
+        <Member type="Field">public static float[] dash1</Member>
+        <Member type="Field">float[] valores</Member>
+        <Member type="Field">double xmax</Member>
+        <Member type="Field">double xmax</Member>
+        <Member type="Field">double imgx</Member>
+        <Member type="Method">public void mouseDragged(MouseEvent evt)</Member>
+        <Member type="Constructor">public GraphPanel(int Galto, int Gancho, int escalaX, int escalaY, int x0, int y0, boolean isFreq)</Member>
+        <Member type="Method">public void mousePressed(MouseEvent evt)</Member>
+        <Member type="Method">public void mouseReleased(MouseEvent evt)</Member>
+        <Member type="Method">public void mouseMoved(MouseEvent evt)</Member>
+        <Member type="Method">public void mouseDragged(MouseEvent evt)</Member>
+        <Member type="Method">public void mouseClicked(MouseEvent evt)</Member>
+        <Member type="Method">public void mouseEntered(MouseEvent evt)</Member>
+        <Member type="Method">public void mouseExited(MouseEvent evt)</Member>
+        <Member type="Method">public void paintComponent(Graphics g)</Member>
+        <Member type="Method">void Graficar(Graphics ap, int xg, int yg)</Member>
+        <Member type="Method">private float calculateXScale(boolean isFreq, int i)</Member>
+        <Member type="Method">public static void setEscalaX(int escalaX)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>EventHandler</Name>
+        <Access>Public</Access>
+        <Location left="1004" top="40" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Object source = evt.getSource ()</Member>
+        <Member type="Method">public void actionPerformed(ActionEvent evt)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ProcessValues</Name>
+        <Access>Public</Access>
+        <Location left="1025" top="304" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int ancho</Member>
+        <Member type="Field">int step</Member>
+        <Member type="Field">float[] outGraphY = new float[ancho-20]</Member>
+        <Member type="Method">public void graphValues(float [][] entrada, float[] salida)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ZoomPanel</Name>
+        <Access>Public</Access>
+        <Location left="883" top="754" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">SliderListener auditor = new SliderListener()</Member>
+        <Member type="Field">JSlider xSlider</Member>
+        <Member type="Field">JSlider ySlider</Member>
+        <Member type="Constructor">ZoomPanel(boolean orientation)</Member>
+        <Member type="Method">public void ajusteEscala()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SliderListener</Name>
+        <Access>Public</Access>
+        <Location left="1095" top="754" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">JSlider source</Member>
+        <Member type="Method">public void stateChanged(ChangeEvent e)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>866</X>
+          <Y>865</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
