@@ -97,6 +97,7 @@ public final class MainScreen extends JFrame implements WindowListener
         entradaBox = new JComboBox();
         entradaBox.addItem("Sound Card");
         entradaBox.addItem("Noise");
+        entradaBox.addItem("RTL2832U");
         entradaBox.setEditable(false);
         recibirButton = new JButton("Receive");
         pararButton = new JButton("Stop");
@@ -487,7 +488,8 @@ public final class MainScreen extends JFrame implements WindowListener
     {
 //        System.out.println("Command: " + evt.getActionCommand());
         ItemSelectable is = (ItemSelectable)evt.getSource();
-//        System.out.println(", Selected: " + selectedString(is));
+        setArea("Instancia de Input: "+Input.getInstance());
+        if (Input.getInstance()!=null)
         input.cancelInput();
         input = new Input();
         input.execute();

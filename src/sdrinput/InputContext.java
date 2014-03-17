@@ -32,7 +32,7 @@ public class InputContext
             }
             catch(Exception e)
             {
-           //     MainScreen.mensajeArea.setText((new StringBuilder()).append("\r\nCan't start sound card\n").append(e.toString()).toString());
+                MainScreen.mensajeArea.setText((new StringBuilder()).append("\r\nProblemas con el InputContext\n").append(e.toString()).toString());
                 System.exit(1);
             }
         return null;

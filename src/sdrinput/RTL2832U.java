@@ -13,12 +13,12 @@ import sdrdsp.GetSamples;
  *
  * @author guillermo
  */
-public class Noise implements InputInterface
+public class RTL2832U implements InputInterface
 {
     private byte data[];
     private boolean canceled;
     private GetSamples muestras;
-    public Noise()
+    public RTL2832U()
     {
         muestras = new GetSamples();
         canceled = false;

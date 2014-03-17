@@ -10,11 +10,14 @@ public class FilterSamples
     public float[] order;
     public FilterSamples()
     {
-                
-        ParksMcClellan filter = new ParksMcClellan();
-        FilterSpecification specification = new FilterSpecification();
-        order = ParksMcClellan.design(specification);
-        if (ConfigurationBean.debugL3) MainScreen.mensajeArea.append("Orden = "+order.length);
+        try
+        {    
+            ParksMcClellan filter = new ParksMcClellan();
+            FilterSpecification specification = new FilterSpecification();
+            order = ParksMcClellan.design(specification);
+            if (ConfigurationBean.debugL3) MainScreen.mensajeArea.append("Orden = "+order.length);
+        }
+        catch(Exception e){System.out.println("Error en FilterSamples");}
     }
     
 }

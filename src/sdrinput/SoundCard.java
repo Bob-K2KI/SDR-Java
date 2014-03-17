@@ -139,7 +139,7 @@ public static void outSon(byte[] audioData)
     } 
     catch (Exception e) 
     {
-      System.out.println(e.toString());
+      System.out.println("Error clase SoundCard - Funcion outSon"+e.toString());
       System.exit(0);
     }//end catch
   }//end playAudio
@@ -157,7 +157,7 @@ private Mixer.Info[] captureAudio()
       	getName());
       }//end for loop
     }
-      catch(Exception e){}
+      catch(Exception e){ MainScreen.setArea("Error clase SoundCarrd - Funcion captureAudio"+e.getMessage());}
     return mixerInfo;
 
 }
@@ -206,7 +206,8 @@ class CaptureThread extends Thread
         }
          catch(Exception e)
         {
-            MainScreen.setArea("Error en CaptureThread "+e.getMessage()+"3435");
+            MainScreen.setArea("Error clase CaptureThread - Archivo SoundCard.java - Funcion run "+e.getMessage()+"3435");
+            System.out.println("Error clase CaptureThread - Archivo SoundCard.java - Funcion run "+e.getMessage()+"3435");
         }
 }
 }
@@ -246,7 +247,8 @@ class PlayThread extends Thread
         }
         catch (Exception e) 
         {
-            System.out.println(e.toString());
+            System.out.println("Error clase PlayThread -  Archivo SoundCard.java - Funcion run"+e.toString());
+            MainScreen.setArea("Error clase PlayThread -  Archivo SoundCard.java - Funcion run");
             System.exit(0);
         }//end catch
     }//end run
