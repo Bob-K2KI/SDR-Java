@@ -29,16 +29,16 @@ public class RTL2832U implements InputInterface
     {
 //        System.out.println(ConfigurationBean.getFramesSec()*2/5);
 //        data = new byte[((int)ConfigurationBean.getFramesSec())*2/5];
-        data = new byte[4];
+//        data = new byte[4];
 //        MainScreen.setArea("Noise started");
-        while (!canceled)
+//        while (!canceled)
         {
 //            for (int i = 0; i<((int)ConfigurationBean.getFramesSec())*2/5;i++)
-            for (int i = 0; i<4;i++)
-            {
-                data[i] = (byte)((2 * Math.random()*10)-10.0f);              
-            }
-            muestras.Convert(data, false);
+//            for (int i = 0; i<4;i++)
+//            {
+//                data[i] = (byte)((2 * Math.random()*10)-10.0f);              
+//            }
+//            muestras.Convert(data, false);
         }
     }
  

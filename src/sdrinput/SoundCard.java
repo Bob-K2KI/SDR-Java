@@ -115,7 +115,7 @@ public class SoundCard implements InputInterface
             MainScreen.setArea("Error 10"+e.getMessage());
         }
     }
-public static void outSon(byte[] audioData)
+public static void startSound(byte[] audioData)
 {
     try
     {
@@ -139,7 +139,7 @@ public static void outSon(byte[] audioData)
     } 
     catch (Exception e) 
     {
-      System.out.println("Error clase SoundCard - Funcion outSon"+e.toString());
+      System.out.println("Error clase SoundCard - Funcion startSound"+e.toString());
       System.exit(0);
     }//end catch
   }//end playAudio

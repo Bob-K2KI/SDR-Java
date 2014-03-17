@@ -20,7 +20,7 @@ public class AudioOut
 {        
     public void outSound(byte[] samples )
     {
-     SoundCard.outSon(samples);
+     SoundCard.startSound(samples);
     }
 }
 

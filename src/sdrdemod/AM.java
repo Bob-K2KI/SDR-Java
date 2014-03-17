@@ -57,7 +57,7 @@ public class AM implements OutputInterface
                 } 
                 else 
                 {
-                    SoundCard.outSon(outData);
+                    SoundCard.startSound(outData);
                 }
             }
         }        
